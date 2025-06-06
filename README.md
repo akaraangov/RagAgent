@@ -76,15 +76,24 @@ pip install -r requirements.txt
 ```
 
 F. Configure Environment Variables
-Create a .env file by copying the template.
+
 # For Windows
+
+create file .env with the following contents
+
 ```bash
-copy .env.example .env
+
+DB_USER="admin"
+DB_PASSWORD="password"
+DB_HOST="localhost"
+DB_PORT="5432"
+DB_NAME="rag_db"
+
 ```
 
 # For macOS/Linux
 ```bash
-cp .env.example .env
+vi .env
 
 DB_USER="admin"
 DB_PASSWORD="password"
@@ -111,10 +120,17 @@ streamlit run app.py
 ```
 
 Your browser should automatically open to the application's URL (usually http://localhost:8501).
+
 🔧 How to Use the Agent
+
 Chat: Type your questions in the input box at the bottom. The agent will respond in Bulgarian with citations.
+
 Add Documents: Use the sidebar to upload new text files. Click "Add File" to index them.
+
 Manage Documents: Select a file from the dropdown in the sidebar and click "Delete File" to remove it from the agent's knowledge.
+
+
+```bash
 
 📂 Project Structure
 .
@@ -130,3 +146,4 @@ Manage Documents: Select a file from the dropdown in the sidebar and click "Dele
 ├── README.md              # This file
 └── requirements.txt       # Python dependencies
 
+```
