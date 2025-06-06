@@ -47,34 +47,45 @@ Follow these steps to set up and run the project on your local machine.
 ```bash
 git clone https://github.com/akaraangov/RagAgent.git
 cd RagAgent
+```
 
 B. Pull the Ollama Model
 Make sure the llama3 model is available locally.
+```bash
 ollama pull llama3
+```
 
 C. Start the PostgreSQL Database
 
 D. Create and Activate a Virtual Environment
 # For Windows
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
 # For macOS/Linux
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 E. Install Dependencies
+```bash
 pip install -r requirements.txt
-
+```
 
 F. Configure Environment Variables
 Create a .env file by copying the template.
 # For Windows
+```bash
 copy .env.example .env
+```
 
 # For macOS/Linux
+```bash
 cp .env.example .env
-
+```
 DB_USER="admin"
 DB_PASSWORD="password"
 DB_HOST="localhost"
@@ -88,11 +99,15 @@ Place your .txt or .md files into the data/ directory. Then run:
 python ingest.py
 
 Option B: Ingest from a custom directory.
+```bash
 python ingest.py /path/to/your/documents
+```
 
 4. Run the Streamlit App
 Now you are ready to start the agent!
+```bash
 streamlit run app.py
+```
 
 Your browser should automatically open to the application's URL (usually http://localhost:8501).
 🔧 How to Use the Agent
