@@ -85,12 +85,13 @@ copy .env.example .env
 # For macOS/Linux
 ```bash
 cp .env.example .env
-```
+
 DB_USER="admin"
 DB_PASSWORD="password"
 DB_HOST="localhost"
 DB_PORT="5432"
 DB_NAME="rag_db"
+```
 
 3. Ingest Initial Data
 Before running the app, you need to populate the database with some initial knowledge.
